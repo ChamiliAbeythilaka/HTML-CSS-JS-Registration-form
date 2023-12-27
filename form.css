@@ -1,0 +1,119 @@
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	min-height: 100vh;
+	margin: 0;
+	background-image: url(5793158.webp);
+	justify-content: center;
+    align-items: center;
+		
+}
+
+.formcontainer {
+	background-color: #F8F8FF;
+	border-radius: 5px;
+	overflow: hidden;
+	width: 600px;
+	max-width: 100%;
+}
+
+.header {
+	border-bottom: 1px solid #f0f0f0;
+	background-color:#DCDCDC;
+	padding: 20px 40px;
+}
+
+.header h1 {
+	margin: 0;
+	color:#000080
+}
+
+.form {
+	padding: 30px 40px;	
+}
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color:#0000FF;
+}
+
+.form-control.success input {
+	border-color:#66CDAA;
+}
+
+.form-control.error input {
+	border-color:#B22222;
+}
+
+
+.form-control p {
+	color:	#DC143C;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error p {
+	visibility: visible;
+}
+
+.button1 {
+	background-color:	#00008B;
+	border: 2px solid #8e44ad;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.button2 {
+	background-color:	#00008B;
+	border: 2px solid #8e44ad;
+	border-radius: 4px;
+	color: #fff;
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 17px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+}
+
+
+
+
+
+
+

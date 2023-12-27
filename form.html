@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+   <head>
+	 <title>FormValidation</title>
+	 <link rel="stylesheet" href="form.css"/>
+   </head>
+   
+   
+<body>
+<div class="formcontainer">
+
+	<div class="header">
+		<h1><center>Registration</center></h1>
+	</div>
+	
+	<form id="form" action="" method="GET" class="form" onsubmit="return checkInputs()">
+	      
+		    <div class="form-control">
+			<label>Firstname</label>
+			<input type="text" placeholder="first name" id="firstname"/>
+			<br><p>Error message</p>
+			 </div> 
+		  
+		    <div class="form-control"> 
+			<label>Lastname</label>
+			<input type="text" placeholder="last name" id="lastname"/>
+			<br><p>Error message</p>	
+		    </div>
+		  
+	        <div class="form-control">
+		    <label>Date of Birth:</label>
+		    <input type="date" id = "DOB">
+		    <span id = "message" style="color:red"> </span> <br><br>
+		    <button type="button" onclick = "ageCalculator()"> Calculate age </button><br>
+		    <textarea style="color:32A80F" id="forage"></textarea> 
+			<br><br><p>Error message</p>	
+		    </div>
+			  
+		    <div class="form-control">
+		    <label>Address:</label><br/>
+		    <textarea id="address" type="text" rows="4" col="10"></textarea>
+		    <br><br><p>Error message</p>	
+		    </div>
+	        
+			<div class="form-control">
+			<label>Email</label>
+			<input type="email" placeholder="sample@pop.com" id="email" />
+			<br><p>Error message</p>
+		    </div> 
+			
+		    <div class="form-control">
+			<label>Username</label>
+			<input type="text" placeholder="user name" id="username" />
+			<br/><br/><p>Error message</p>
+			</div>
+		
+		    <div class="form-control">
+			<label>Password</label>
+			<input type="password" placeholder="Password" id="password"/>
+			<br><p>Error message</p>
+		    </div>
+		
+		    <div class="form-control">
+			<label>Confirm password</label>
+			<input type="password" placeholder="Re-enter your Password" id="password2"/>
+			<br><p>Error message</p>
+		    </div>
+		
+		
+		   <div>
+		   <label>I agree to the terms and conditions of the university</label>
+		   <input type="checkbox" id="terms_and_conditions" value="1" onclick="terms_changed(this)"> 
+		
+           <button class="button button1" type="submit" id="submit_button" disabled >Sign Up</button>
+           </div>
+		   
+		   <br/>
+		   <input class="button button2" type="reset" value="Clear fields">
+		   
+	</form>
+	
+</div>
+
+<script src="form.js"></script>
+
+
+</body>
+
+      <script type="text/javascript">
+			
+            function terms_changed(termsCheckBox){
+            //If the checkbox has been checked
+            if(termsCheckBox.checked){
+             document.getElementById("submit_button").disabled = false;
+            } else{
+            //Otherwise, disable the submit button.
+            document.getElementById("submit_button").disabled = true;
+             }
+            }
+			
+			function ageCalculator() {
+			var userinput = document.getElementById("DOB").value;
+			var dob = new Date(userinput);
+			if(userinput==null || userinput=='') {
+			  document.getElementById("message").innerHTML = "Choose a date please!";  
+			  return false; 
+			} else {
+			
+			var month_diff = Date.now() - dob.getTime();
+			
+			var age_dt = new Date(month_diff); 
+			   
+			var year = age_dt.getUTCFullYear();
+			var age = Math.abs(year - 1970);
+			
+			return document.getElementById("forage").innerHTML =  
+					 "Age: " + age + " years. ";
+			}
+		}
+					
+					
+			
+  </script>
+
+
+
+</html>
